@@ -1,0 +1,83 @@
+/* 1. Текст заголовка великими літерами */
+.title {
+  text-transform: uppercase;
+}
+
+/* 5. id для h1 */
+#main-title {
+  color: green;
+}
+
+/* 13. Червоний колір h1, не спрацює без !important через більшу специфічність id */
+h1 {
+  color: red !important;
+}
+
+/* 2. Список цілей — червоний текст */
+.cili {
+  color: #ff0000;
+}
+
+/* 3. Пункти списку цілей — жовтий фон, курсив */
+.cili .list__item {
+  background-color: yellow;
+  font-style: italic;
+}
+
+/* 4. Усі впорядковані списки мають червону рамку */
+ol {
+  border: 1px solid red;
+}
+
+/* 6. Посилання на PDF — зелені, курсивні */
+a[href$=".pdf"] {
+  color: green;
+  font-style: italic;
+}
+
+/* 7. Усі посилання — фіолетові, без підкреслення */
+a {
+  color: violet;
+  text-decoration: none;
+}
+/* PDF залишаються зеленими, бо їх селектор специфічніший */
+
+/* 8. Вкладені списки другого рівня — великі літери */
+ul ul, ol ol {
+  text-transform: uppercase;
+}
+
+/* 9. Посилання всередині абзаців — magenta + mistyrose */
+p a {
+  color: magenta;
+  background-color: mistyrose;
+}
+
+/* 10. Клас bold — жирний шрифт */
+.bold {
+  font-weight: bold;
+}
+
+/* 11. li.bold — великі літери */
+li.bold {
+  text-transform: uppercase;
+}
+
+/* 12. Другий абзац і абзац "Написати нам листа" */
+.second,
+.contact {
+  text-align: right;
+  border: 2px solid blue;
+  font-size: 20px;
+}
+
+/* 14. Для всіх елементів box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* 15. Фон лише під текстом (span усередині елементів списку) */
+.cili .list__item span {
+  background-color: yellow;
+  font-style: italic;
+}
